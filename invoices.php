@@ -125,13 +125,15 @@ if (empty($invoices)) {
                 <th>Invoice ID</th>
                 <th>Date</th>
                 <th>Total</th>
+                <th>Payment Method</th>
                 <th>Actions</th>
             </tr>";
     foreach ($invoices as $invoice) {
         echo "<tr>
                 <td>{$invoice['id']}</td>
                 <td>{$invoice['date']}</td>
-                <td>{$invoice['total']}</td>
+                <td>{$invoice['total']} $ </td>
+                <td>{$invoice['payment_method']}</td>
                 <td>
                 <a href='edit_invoice.php?invoice_id={$invoice['id']} & customer_id={$customer_id}'>Edit</a>
             |
